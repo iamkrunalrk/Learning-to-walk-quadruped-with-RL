@@ -44,7 +44,6 @@ Where:
 - $\alpha$ = temperature parameter
 
 Value function loss:
-
 $$
 L_V = \mathbb{E}_{s_t}[\frac{1}{2}(V_\psi(s_t) - \mathbb{E}_{a_t}[Q_\theta(s_t,a_t) - \log\pi_\phi(a_t|s_t)])^2]
 $$
@@ -84,7 +83,7 @@ Total reward $R_t = \sum_{i=1}^6 w_i r_i$:
 |-----------|--------------------|------------------|
 | Forward Velocity | $r_1 = v_x$ | 2 |
 | Angular Velocity (Z-axis) | $r_2$ = $\omega_z$ | 1 |
-| Vertical Velocity Penalty | $r_3$ = -\|$v_z$\| | 1.5 |
+| Vertical Velocity Penalty | $r_3$ = - \| $v_z$ \| | 1.5 |
 | Angular Stability Penalty | $r_4 = -\|\omega_{xy}\|^2$ | -0.5 |
 | Torque Maintenance | $r_5 = -\|\tau\|^2 $ | 0.0002 |
 | Orientation Penalty | $r_6$ = -(\| $\phi$ \| + \| $\theta$ \|)  | 0.2 |
