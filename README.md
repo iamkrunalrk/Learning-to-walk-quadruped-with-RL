@@ -51,7 +51,9 @@ Where:
 
 Value function loss:
 
-$$L_V = \mathbb{E}_{s_t}[\frac{1}{2}(V_\psi(s_t) - \mathbb{E}_{a_t}[Q_\theta(s_t,a_t) - \log\pi_\phi(a_t|s_t)])^2]$$
+$$
+L_V = \mathbb{E}_{s_t}[\frac{1}{2}(V_\psi(s_t) - \mathbb{E}_{a_t}[Q_\theta(s_t,a_t) - \log\pi_\phi(a_t|s_t)])^2]
+$$
 
 ---
 
