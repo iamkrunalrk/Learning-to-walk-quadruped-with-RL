@@ -28,7 +28,9 @@ This repository focuses on the application of reinforcement learning (RL) algori
 
 ### 1. Proximal Policy Optimization (PPO)
 Objective function with clipping:
-$$L^{CLIP}(\theta) = \mathbb{E}_t[\min(r_t(\theta)\hat{A}_t, \text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon)\hat{A}_t)]$$
+$$
+L^{CLIP}(\theta) = \mathbb{E}_t[\min(r_t(\theta)\hat{A}_t, \text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon)\hat{A}_t)]
+$$
 
 Where:
 - $r_t(\theta) = \frac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{old}}(a_t|s_t)}$
@@ -37,16 +39,16 @@ Where:
 
 ### 2. Soft Actor-Critic (SAC)
 Maximize entropy-augmented reward:
-$$J(\pi) = \sum_{t=0}^T \mathbb{E}_{(s_t,a_t)}[r(s_t,a_t) + \alpha\mathcal{H}(\pi(\cdot|s_t))]$$
+$$
+J(\pi) = \sum_{t=0}^T \mathbb{E}_{(s_t,a_t)}[r(s_t,a_t) + \alpha\mathcal{H}(\pi(\cdot|s_t))]
+$$
 
 Where:
 - $\mathcal{H}$ = entropy term
 - $\alpha$ = temperature parameter
 
 Value function loss:
-$$
-L_V = \mathbb{E}_{s_t}[\frac{1}{2}(V_\psi(s_t) - \mathbb{E}_{a_t}[Q_\theta(s_t,a_t) - \log\pi_\phi(a_t|s_t)])^2]
-$$
+$$L_V = \mathbb{E}_{s_t}[\frac{1}{2}(V_\psi(s_t) - \mathbb{E}_{a_t}[Q_\theta(s_t,a_t) - \log\pi_\phi(a_t|s_t)])^2]$$
 
 ---
 
