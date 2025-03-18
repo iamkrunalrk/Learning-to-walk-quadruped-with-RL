@@ -1,4 +1,4 @@
-# Multi-Legged Robot Reinforcement Learning 
+# Scalable Locomotion Policy Learning for Quadruped
 
 
 This repository focuses on the application of reinforcement learning (RL) algorithms to train a quadruped robot to navigate various terrains. The goal is to use RL techniques to improve the robot's locomotion by adjusting its movements based on the feedback from its environment. The repository includes three Jupyter Notebooks that explore training using Proximal Policy Optimization (PPO) and Soft Actor-Critic (SAC).
